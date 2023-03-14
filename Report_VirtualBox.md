@@ -99,22 +99,19 @@ After renaming we have to reboot VM.
 
 7. Configration neworks and adapters for machines
   ### - Linux A 
-  
-    ![netplan config A -1](https://user-images.githubusercontent.com/25878224/224858816-011d2135-216c-4b18-800c-1a33db1ca272.PNG)
-  
-    ![netplan config A -2](https://user-images.githubusercontent.com/25878224/224858828-dcfc9645-53af-4186-bb63-2a1625140c6a.PNG)
+  ![netplan config A -1](https://user-images.githubusercontent.com/25878224/224859158-9b387d51-9b03-46fa-8339-49a52b8d4e9b.PNG)
 
-    ![netplan config A -3](https://user-images.githubusercontent.com/25878224/224858848-f9268779-f790-4723-9aa4-03542376eed9.PNG)
+  ![netplan config A -2](https://user-images.githubusercontent.com/25878224/224859181-5b0f1bf9-9018-44fb-9653-8689ca25447f.PNG)
 
   ### - Linux B 
   
-    ![netplan config B -1](https://user-images.githubusercontent.com/25878224/224858856-5c6fd46a-f03e-49ba-b2c9-331ec02d43a2.PNG)
+   ![netplan config B -1](https://user-images.githubusercontent.com/25878224/224858856-5c6fd46a-f03e-49ba-b2c9-331ec02d43a2.PNG)
   
-    ![netplan config B -2](https://user-images.githubusercontent.com/25878224/224858866-7cfcd918-0825-4d2e-b2ee-87e3fdab23ee.PNG)
+   ![netplan config B -2](https://user-images.githubusercontent.com/25878224/224858866-7cfcd918-0825-4d2e-b2ee-87e3fdab23ee.PNG)
   
   ### - Linux C 
 
-    ![netplan config C -1](https://user-images.githubusercontent.com/25878224/224858925-92a3b892-386c-4f4f-a333-81fb5bbddc05.PNG)
+   ![netplan config C -1](https://user-images.githubusercontent.com/25878224/224858925-92a3b892-386c-4f4f-a333-81fb5bbddc05.PNG)
 
-    ![netplan config C -2](https://user-images.githubusercontent.com/25878224/224858939-93bac934-86de-42ad-88a5-2973bcd50817.PNG)
+   ![netplan config C -2](https://user-images.githubusercontent.com/25878224/224858939-93bac934-86de-42ad-88a5-2973bcd50817.PNG)
     
