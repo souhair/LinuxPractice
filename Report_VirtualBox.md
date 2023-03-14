@@ -115,3 +115,11 @@ After renaming we have to reboot VM.
 
    ![netplan config C -2](https://user-images.githubusercontent.com/25878224/224858939-93bac934-86de-42ad-88a5-2973bcd50817.PNG)
     
+8. Route configuration 
+
+10. Web Server (Machine A)
+
+
+12. Web Client (Machine C)
+
+
