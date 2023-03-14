@@ -51,11 +51,8 @@ After renaming we have to reboot VM.
 
     ![adapter C-1](https://user-images.githubusercontent.com/25878224/224854199-53cbe18f-00f3-425d-9733-dc0b32df9c9d.PNG)
     
+    ![adapter C -2 neww](https://user-images.githubusercontent.com/25878224/224864839-c11e892d-a6c4-4cdd-b1ee-cd85ab357bdd.PNG)
 
-    ![adapter C-2](https://user-images.githubusercontent.com/25878224/224854206-5adccd2d-7e82-4043-b954-b087d973ac51.PNG)
-    
-    
-    ![adapter C-3](https://user-images.githubusercontent.com/25878224/224854312-0979229e-d717-4d23-a1f6-8a3d3f516c35.PNG)
 
 5. Connect virtual machine to the subnet with your laptop.
    ### - Linux A 
@@ -113,10 +110,22 @@ After renaming we have to reboot VM.
 
    ![netplan config C -1](https://user-images.githubusercontent.com/25878224/224858925-92a3b892-386c-4f4f-a333-81fb5bbddc05.PNG)
 
-   ![netplan config C -2](https://user-images.githubusercontent.com/25878224/224858939-93bac934-86de-42ad-88a5-2973bcd50817.PNG)
+   ![ip addr C Neww](https://user-images.githubusercontent.com/25878224/224864978-e00fbd20-658b-4608-a82b-709223d7a0ea.PNG)
+
     
 8. Route configuration 
+    - check the connection between server and gateway using tcp over enp0s8
+    
+    ![tcp B - A](https://user-images.githubusercontent.com/25878224/224865139-45c038ba-2197-48f5-a844-9645f62cae7e.PNG)
 
+    
+    - check the connection between client and gateway using tcp over enp0s9
+
+    ![tcp B -C](https://user-images.githubusercontent.com/25878224/224865158-3425933c-7137-4edb-b0dd-a3539520c99e.PNG)
+
+    - connection between sever and client over gateway 
+        - The easiest way with the current configuration is to allow ip packet forwarding in our gateway
+    
 10. Web Server (Machine A)
 
 
