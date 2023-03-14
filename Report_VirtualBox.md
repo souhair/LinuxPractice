@@ -153,12 +153,27 @@ After renaming we have to reboot VM.
     - connection between sever and client over gateway 
         - The easiest way with the current configuration is to allow ip packet forwarding in our gateway
         
-   ![ip_forward_1 B](https://user-images.githubusercontent.com/25878224/224865655-c36a6ae9-9873-4af6-b3b7-da57ef60c35a.PNG)
+  ![ip_forward_1 B](https://user-images.githubusercontent.com/25878224/224865655-c36a6ae9-9873-4af6-b3b7-da57ef60c35a.PNG)
    
-   ![ip_forward_1 B-2](https://user-images.githubusercontent.com/25878224/224865677-0995dc83-9e6d-483f-8851-c47873cd70b9.PNG)
-    
+  ![ip_forward_1 B-2](https://user-images.githubusercontent.com/25878224/224865677-0995dc83-9e6d-483f-8851-c47873cd70b9.PNG)
+       - To allow only specific packets to be forwarded on a specific port, we configured the route:
+       
+  ![iptables -1](https://user-images.githubusercontent.com/25878224/224868495-f045a89d-68f5-4904-ae3a-ce639e8206be.PNG)
+     
+       -  save the iptables rules
+       
+  ![iptables -2](https://user-images.githubusercontent.com/25878224/224868556-ca816b7c-c06b-4191-a8d9-fbb8e61b8830.PNG)
+   
+  ![iptables rules -3](https://user-images.githubusercontent.com/25878224/224868613-8abbaffa-f92a-407f-a431-8ba854af2a31.PNG)
+
+
+  ![iptables rules -4](https://user-images.githubusercontent.com/25878224/224868622-7ab7faa9-8d2a-4efd-940b-ff1a6bc26998.PNG)
+  
 10. Web Server (Machine A)
 
+create an app.py file, in which we will raise the server using the Flask framework, we will create a file
+
+ Let's try to send a request from the client to the server and see what is displayed in tcpdump
 
 12. Web Client (Machine C)
 
