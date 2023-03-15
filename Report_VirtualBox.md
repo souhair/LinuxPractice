@@ -118,63 +118,83 @@ After renaming we have to reboot VM.
 7. Configration neworks and adapters for machines
   ### - Linux A 
   
-  ![netplan config A -1](https://user-images.githubusercontent.com/25878224/224859158-9b387d51-9b03-46fa-8339-49a52b8d4e9b.PNG)
-  
+  ![netplan config A -1 neww](https://user-images.githubusercontent.com/25878224/225191507-33569119-f1da-4bad-80c4-066baa2ff652.PNG)
 
   ![netplan config A -2](https://user-images.githubusercontent.com/25878224/224859181-5b0f1bf9-9018-44fb-9653-8689ca25447f.PNG)
   
 
   ### - Linux B 
   
-   ![netplan config B -1](https://user-images.githubusercontent.com/25878224/224858856-5c6fd46a-f03e-49ba-b2c9-331ec02d43a2.PNG)
-   
-  
-   ![netplan config B -2](https://user-images.githubusercontent.com/25878224/224858866-7cfcd918-0825-4d2e-b2ee-87e3fdab23ee.PNG)
-   
+  ![netplan config B -1 new](https://user-images.githubusercontent.com/25878224/225191558-c55f9c74-2be3-490d-a7c6-ced8536c198c.PNG)
+
+  ![netplan config B -2](https://user-images.githubusercontent.com/25878224/224858866-7cfcd918-0825-4d2e-b2ee-87e3fdab23ee.PNG)
   
   ### - Linux C 
+  
+  ![netplan config C -1 newww](https://user-images.githubusercontent.com/25878224/225191601-19859f4f-da9c-409d-b64d-1739a7176f2d.PNG)
 
-   ![netplan config C -1](https://user-images.githubusercontent.com/25878224/224858925-92a3b892-386c-4f4f-a333-81fb5bbddc05.PNG)
-   
 
    ![ip addr C Neww](https://user-images.githubusercontent.com/25878224/224864978-e00fbd20-658b-4608-a82b-709223d7a0ea.PNG)
 
     
 8. Route configuration 
-    - check the connection between server and gateway using tcp over enp0s8
+    1. check the connection between server and gateway using tcp over enp0s8
     
   ![tcp B - A](https://user-images.githubusercontent.com/25878224/224865139-45c038ba-2197-48f5-a844-9645f62cae7e.PNG)
 
     
-    - check the connection between client and gateway using tcp over enp0s9
+    2. check the connection between client and gateway using tcp over enp0s9
 
   ![tcp B -C](https://user-images.githubusercontent.com/25878224/224865158-3425933c-7137-4edb-b0dd-a3539520c99e.PNG)
 
-    - connection between sever and client over gateway 
+    3. connection between sever and client over gateway 
         - The easiest way with the current configuration is to allow ip packet forwarding in our gateway
         
   ![ip_forward_1 B](https://user-images.githubusercontent.com/25878224/224865655-c36a6ae9-9873-4af6-b3b7-da57ef60c35a.PNG)
    
   ![ip_forward_1 B-2](https://user-images.githubusercontent.com/25878224/224865677-0995dc83-9e6d-483f-8851-c47873cd70b9.PNG)
-       - To allow only specific packets to be forwarded on a specific port, we configured the route:
-       
-  ![iptables -1](https://user-images.githubusercontent.com/25878224/224868495-f045a89d-68f5-4904-ae3a-ce639e8206be.PNG)
-     
-       -  save the iptables rules
-       
-  ![iptables -2](https://user-images.githubusercontent.com/25878224/224868556-ca816b7c-c06b-4191-a8d9-fbb8e61b8830.PNG)
-   
-  ![iptables rules -3](https://user-images.githubusercontent.com/25878224/224868613-8abbaffa-f92a-407f-a431-8ba854af2a31.PNG)
-
-
-  ![iptables rules -4](https://user-images.githubusercontent.com/25878224/224868622-7ab7faa9-8d2a-4efd-940b-ff1a6bc26998.PNG)
   
-10. Web Server (Machine A)
+        - Use the tcpdump command to look at how packets are forwarded on the interfaces enp0s8 (with server) and enp0s9 (with client)
+        
+  ![tcpdump A-B](https://user-images.githubusercontent.com/25878224/225190473-37f829cb-76de-4ea2-a4ec-025e61e135c2.PNG)
+   
+   
+  ![tcpdump B-C](https://user-images.githubusercontent.com/25878224/225190503-5b05053f-a350-4b3e-b3b8-b69c8aa4bb59.PNG)
+      
+      4. To allow only specific packets to be forwarded on a specific port, we configured the route:
+   
+  ![iptables neww B](https://user-images.githubusercontent.com/25878224/225192753-8c85a677-c53a-4b4d-abb9-58ba8ec2060b.PNG)
 
-create an app.py file, in which we will raise the server using the Flask framework, we will create a file
+       5. save the iptables rules
+       
+  ![iptables rules newww](https://user-images.githubusercontent.com/25878224/225192849-e14a6cf7-69b2-4358-a6a2-25210217ad41.PNG)
+
+10. Web Server (Machine A) and the requests from client (Machine C) using curl 
+  - on the server we create app.py file in new directory called server, then we will raise the server using Flask framework 
+  
+  ![app file neww](https://user-images.githubusercontent.com/25878224/225193771-878a3aed-46c5-4e0f-86d4-ae6c4e51728f.PNG)
 
  Let's try to send a request from the client to the server and see what is displayed in tcpdump
+ 
+  ![web-server1](https://user-images.githubusercontent.com/25878224/225199623-bba890ea-469c-4a30-9b2d-150a71992d2b.PNG)
+   
+  ![web-server-2](https://user-images.githubusercontent.com/25878224/225199643-819bca5b-46f1-4c0c-8d22-1950b853be7d.PNG)
+  
+  - check with wrong port
+   if we change the port in web client request, we obtain (Failed connection)
+   
+  ![server port 5001](https://user-images.githubusercontent.com/25878224/225200434-98f0f7e8-598f-44ec-aa45-fc9eb85880aa.PNG)
 
-12. Web Client (Machine C)
+
+  ![server 5001 -2 ](https://user-images.githubusercontent.com/25878224/225200438-cd7f90bf-c19c-48a4-9fdd-9e5809425e6a.PNG)
+
+ 11. Web Services
+    - Using systemd, you need to create a service that runs the script through autoload
+    
+  ![services1](https://user-images.githubusercontent.com/25878224/225201121-c90fe65e-a67b-46b8-92a7-1c656ae92711.PNG)
+  
+    - Restart services and activate autoload
+    
+  ![Run service](https://user-images.githubusercontent.com/25878224/225201453-c0dba895-942d-4c70-9132-bd074749267a.PNG)
 
 
