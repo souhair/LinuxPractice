@@ -1,22 +1,22 @@
 #! /bin/bash
 # script to create the second virtual machine
 
-echo -e "1- First generate ssh key\n2- Then create a bridge between B and A servers\n" > B_file.txt
-ip link add macvlan1 link eth0 type macvlan mode bridge 
-ip address add dev macvlan1 192.168.18.1/24
-ip link set macvlan1 up
+echo -e "1- First generate ssh key\n2- Then create a bridge between B and A servers\n" >> B_file.txt
+ip link add macvlan1 link eth0 type macvlan mode bridge >> B_file.txt
+ip address add dev macvlan1 192.168.18.1/24 >> B_file.txt
+ip link set macvlan1 up >> B_file.txt
 
-echo -e "3- create a bridge between B and A servers\n" > B_file.txt
-ip link add macvlan2 link eth0 type macvlan mode bridge
-ip address add dev macvlan2 192.168.4.1/24
-ip link set macvlan2 up
-echo -e "4- Display the networks\n" > B_file.txt
-ip a > file.txt
+echo -e "3- create a bridge between B and A servers\n" >> B_file.txt
+ip link add macvlan2 link eth0 type macvlan mode bridge >> B_file.txt
+ip address add dev macvlan2 192.168.4.1/24 >> B_file.txt
+ip link set macvlan2 up >> B_file.txt
+echo -e "4- Display the networks\n" >> B_file.txt
+ip a >> B_file.txt
 
 #------------------------------
 echo -e "5- check the connection with A server using macvlan 1\ntcp listening on the A server\n
-6- check the connection with C server using macvlan 2\ntcp listening on the C server\n" > B_file.txt
-echo "7- tcp listening on port 5000\n" > B_file.txt
+6- check the connection with C server using macvlan 2\ntcp listening on the C server\n" >> B_file.txt
+echo "7- tcp listening on port 5000\n" >> B_file.txt
 tcpdump -c10 'port 5000' 
 if [ $? -eq 0 ]
   then 
