@@ -7,23 +7,22 @@ read -t 3 -n 1
 if [ $? = 0 ] ; then
 break;
 else
-echo "waiting for the keypress" > A_file.txt
+echo "waiting for the keypress" 
 fi
 done
-echo "1- First generate ssh key/n  then press any key to continue" > A_file.txt
-echo -e "2- Then create a bridge between A and B servers/n"  > A_file.txt
+echo -e "1- First generate ssh key\n2- Then create a bridge between A and B servers\n"  > A_file.txt
 ip a 
 ip link add macvlan1 link eth0 type macvlan mode bridge
 ip address add dev macvlan1 192.168.18.10/24
 ip link set macvlan1 up
 echo -e "3- Display the networks\n\n" > A_file.txt
 ip a 
-echo -e "4- create sub-network between A and C servers via B server"  > A_file.txt
+echo -e "4- create sub-network between A and C servers via B server\n"  > A_file.txt
 ip route add 192.168.4.0/24 via 192.168.18.1
 ip route 
 # --------------
 
-echo "7- Create web server on port 5000" > A_file.txt
+echo "7- Create web server on port 5000\n" > A_file.txt
 pip install flask 
 #mkdir server
 cd server
