@@ -1,67 +1,71 @@
 #! /bin/bash
-# a script to create the second virtual machine
-echo "create network bridge between first (192.168.18.10) and second (192.168.18.1) servers
-....
-...."
+# script to create the First virtual machine
+
+echo -e "-Create a server dirctory and create app.py inside it/n and install flask and tcpdump/nand run bash again" >  A_file.txt
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+break;
+else
+echo "waiting for the keypress" > A_file.txt
+fi
+done
+echo "1- First generate ssh key/n  then press any key to continue" > A_file.txt
+echo -e "2- Then create a bridge between A and B servers/n"  > A_file.txt
 ip a 
 ip link add macvlan1 link eth0 type macvlan mode bridge
 ip address add dev macvlan1 192.168.18.10/24
 ip link set macvlan1 up
-ip a
-echo "create tcp connection between first and second servers
-....
-...."
-apk add tcpdump
-tcpdump
-echo "check connection with the second server
-....
-...."
-ping 192.168.18.1
-echo "check the routes for first server
-....
-...."
-ip route
-echo "tcp connection between first(192.168.18.10) and third (192.168.4.100) servers
-....
-...."
-tcpdump
-echo "create sub netwoek with third server by routing
-....
-...."
+echo -e "3- Display the networks\n\n" > A_file.txt
+ip a 
+echo -e "4- create sub-network between A and C servers via B server"  > A_file.txt
 ip route add 192.168.4.0/24 via 192.168.18.1
-echo "check connect with the third server (192.168.4.100)
-....
-...."
-ping 192.168.4.100
-echo "create a web server on port 5000 with third server as a client
-....
-...."
-pip install flask
-mkdir myapp
-cd myapp
-echo "web-server configration with requests: GET, PUT, POST
-..load app.py from the File VM_A file or open the A_bash file and look at the end of it..
-...."
-vim app.py
+ip route 
+# --------------
+
+echo "7- Create web server on port 5000" > A_file.txt
+pip install flask 
+#mkdir server
+cd server
+echo "8- Use the app.py file"  > A_file.txt
+echo  "9- Run the app.py file" > A_file.txt
 python3 app.py
 
-"""
-from crypt import methods
-from flask import Flask
+#--------------------
+# echo -e "5- check the connection between A and B servers\ntcp listening on the B server" 
+# echo "Run the tcp server on B server (tcpdump -i macvlan1) then press any key to continue"
+# while [ true ] ; do
+# read -t 3 -n 1
+# if [ $? = 0 ] ; then
+# break ;
+# else
+# echo "waiting for the keypress"
+# fi
+# done
+# ping -c1 192.168.18.1 
+# if [ $? -eq 0 ]
+#   then 
+#     echo ok 
+#     exit 0
+#   else
+#     echo “fail”
+# fi
 
-app = Flask(__name__)
-
-@app.route("/", methods=['GET'])
-def hello_world():
-    return "<p>Hello, World!</p>"
-
-@app.route("/", methods=['PUT'])
-def hello_world_put():
-    return "<p>Hello, World!</p>"
-
-@app.route("/", methods=['POST'])
-def hello_world_post():
-    return "<p>Hello, World!</p>"
-
-app.run(host='0.0.0.0', port=5000)
-"""
+# echo -e "6- check the connection between A and C servers\ntcp listening on the C server"
+# echo "Run the tcp server on C server  then press any key to continue"
+# while [ true ] ; do
+# read -t 3 -n 1
+# if [ $? = 0 ] ; then
+# break ;
+# else
+# echo "waiting for the keypress"
+# fi
+# done
+# ping -c10 192.168.4.100 
+# if [ $? -eq 0 ]
+#   then 
+#     echo ok 
+#     exit 0
+#   else
+#     echo “fail”
+# fi
