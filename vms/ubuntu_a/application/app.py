@@ -16,6 +16,6 @@ def change_login():
 
 @app.route('/login', methods=['POST'])
 def login():
-    return f"\n<p>Your Login us {request.form['login']}!</p>\n"
+    return f"\n<p>Your Login is {request.form['login']}!</p>\n"
 
 app.run(host='0.0.0.0', port=5000, debug=True)
