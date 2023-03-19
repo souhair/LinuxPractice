@@ -1,199 +1,168 @@
 # 1. Create three virtual machines in VirtualBox
 
-  ![1](https://user-images.githubusercontent.com/25878224/224850734-a82484fe-b9b8-4773-b2c2-9e11c71e6bf2.PNG)
+  ![1](https://user-images.githubusercontent.com/25878224/226160704-0a02a669-d4b2-4315-8000-dc6413f827e4.PNG)
 
 # 2. Rename the hostname for the three VMs
-  ## - Linux A hostname called souhairserver
-    
-  ![hostname1](https://user-images.githubusercontent.com/25878224/224851340-bea6e79f-a6c6-40eb-a44f-dd2023e6003d.PNG)
-
-  ## - Linux B hostname called souhairgateway
-    
-  ![hostname2](https://user-images.githubusercontent.com/25878224/224852802-ccc60827-ced8-448a-9bb7-bdb4d51e45b2.PNG)
-
-  ## - Linux C hostname called souhairclient
-    
-  ![hostname3](https://user-images.githubusercontent.com/25878224/224851349-422d36ed-e4e3-4f80-ae5d-f85e79891276.PNG)
-
-
-### After renaming we have to reboot VM.
 # 3. Create new user for each VM and name it souhair_1, souhair_2, souhair_3 recpectively
+  ## - Linux A hostname called souhairserver - new user called souhair_1
+    
+  ![1- hostname_user A](https://user-images.githubusercontent.com/25878224/226160783-021e9b24-a1ed-4ea2-bcf2-762428a76ca7.PNG)
 
-  ## - Linux A: new user called souhair_1
+  ## - Linux B hostname called souhairgateway - new user called souhair_2 
+   
+  ![1- hostname_user B](https://user-images.githubusercontent.com/25878224/226160790-9f3fd201-a0ce-4f21-aafc-e02e8577f29c.PNG)
 
-  ![user1](https://user-images.githubusercontent.com/25878224/224853045-de609537-bf40-4ec0-b8ca-4c3000e2d8cf.PNG)
-
-  ## - Linux B: new user called souhair_2
-
-  ![user2](https://user-images.githubusercontent.com/25878224/224853066-a1225ce1-33bd-4ffc-a6dc-b15457c59af3.PNG)
-
-  ## - Linux C: new user called souhair_3
-
-  ![user3](https://user-images.githubusercontent.com/25878224/224853080-5118e568-926b-46a3-8c9d-1a3cd50c931b.PNG)
+  ## - Linux C hostname called souhairclient - new user called souhair_3
+    
+  ![1- hostname_user C](https://user-images.githubusercontent.com/25878224/226160804-b759b4c5-d48d-401c-b674-572de472dc58.PNG)
 
 # 4. Network Settings for VMs
   ## - Linux A
     
-  ![adapter A-1](https://user-images.githubusercontent.com/25878224/224854061-f0a08f4d-f597-4caf-9cb9-75c7684030e2.PNG)
-    
+  ![2- NetworkAdapter1A](https://user-images.githubusercontent.com/25878224/226160832-02a1e9f6-cd48-4e8e-9dd1-b295cd8883d8.PNG)
 
-  ![adapter A-2](https://user-images.githubusercontent.com/25878224/224854117-e9f9c785-d41e-43fa-97c1-3637249a69ee.PNG)
-
+  ![3- NetworkAdapter2A](https://user-images.githubusercontent.com/25878224/226160838-92f3335e-9944-456d-8806-65227ab31e62.PNG)
 
   ## - Linux B
+  
+  ![2- NetworkAdapter1B](https://user-images.githubusercontent.com/25878224/226160855-e5dba784-5a9a-4b1b-b6b8-9d40d1919edf.PNG)
 
+  ![2- NetworkAdapter 2B](https://user-images.githubusercontent.com/25878224/226160865-e988f1a2-7b12-4834-907e-b050a0ad21b8.PNG)
 
-  ![adapter B-1](https://user-images.githubusercontent.com/25878224/224854125-5b662429-c508-425f-ac66-273611d2dcb1.PNG)
-    
-
-  ![adapter B-2](https://user-images.githubusercontent.com/25878224/224854144-3ca62341-bf4a-40a3-b2f9-4a6988b85bea.PNG)
-    
-
-  ![adapter B-3](https://user-images.githubusercontent.com/25878224/224854156-ef97d6b7-2e35-45f0-bde7-c222b22d9c2c.PNG)
-    
+  ![2- NetworkAdapter3 B](https://user-images.githubusercontent.com/25878224/226160878-851236bd-bd72-4ada-a01c-ad09e9629c5c.PNG)
 
   ## - Linux C
 
-
-  ![adapter C-1](https://user-images.githubusercontent.com/25878224/224854199-53cbe18f-00f3-425d-9733-dc0b32df9c9d.PNG)
-    
-    
-  ![adapter C -2 neww](https://user-images.githubusercontent.com/25878224/224864839-c11e892d-a6c4-4cdd-b1ee-cd85ab357bdd.PNG)
+  ![2- NetworkAdapter 1C](https://user-images.githubusercontent.com/25878224/226160895-c32f380a-f0a6-42df-9992-51ffa32381f7.PNG)
+  
+  ![2- NetworkAdapter 2C](https://user-images.githubusercontent.com/25878224/226160897-86997fb3-a69f-4d2d-82a8-8097b203b73b.PNG)
 
 
 # 5. Connect virtual machine to the subnet with your laptop.
   ## - Linux A 
-   
-  ![ip addr 1](https://user-images.githubusercontent.com/25878224/224855027-5fc5a249-8d1f-4f2d-939c-71a4d37367d8.PNG)
-    
- 
-  ![check ip A](https://user-images.githubusercontent.com/25878224/224855799-7e0a25d4-9d64-4c0d-a89f-8e2f2694e588.PNG)
-    
+  
+   ![4- ip addr before 1 -A](https://user-images.githubusercontent.com/25878224/226160939-64081f4f-dd25-4a02-ad08-0e1177986d36.PNG)
+
+   ![5- ip addr before 2 -A](https://user-images.githubusercontent.com/25878224/226160948-b98df3e1-ae42-4974-8760-c4e232e38ec5.PNG)
+
  
   ## - Linux B
   
-  ![ip addr 2](https://user-images.githubusercontent.com/25878224/224855042-fb45a831-9a7b-4ae1-b797-027656054b4d.PNG)
-  
-  
-  ![check ip B](https://user-images.githubusercontent.com/25878224/224855826-8b6fceec-d58e-4b3d-98f3-63eecb944ae1.PNG)
-    
+   ![4- ip addr before 1 -B](https://user-images.githubusercontent.com/25878224/226160967-0af21e6a-ce7a-449a-be4f-633c5490825c.PNG)
+   
+  ![5- ip addr before 2 -B](https://user-images.githubusercontent.com/25878224/226160975-aa7c660f-485b-4e0a-ac9c-bed1fa5f425a.PNG)
 
   ## - Linux C
   
-  ![ip addr 3](https://user-images.githubusercontent.com/25878224/224855065-7c181d53-c321-426f-ae95-7dca868e039b.PNG)
-    
+  ![4- ip addr before 1 -C](https://user-images.githubusercontent.com/25878224/226160994-528d3b9b-dc9b-4047-8f0c-3705b84a8ead.PNG)
 
-  ![check ip C](https://user-images.githubusercontent.com/25878224/224855852-571409e9-e1f5-4c83-99c1-6190bbd4c6b9.PNG)
-    
+  ![5- ip addr before 2 -C](https://user-images.githubusercontent.com/25878224/226160998-85f60b35-d1de-4c13-b11d-8f8724a29a96.PNG)
 
 # 6. Setting up an SSH connection with machines
   ## - Linux A 
    
-  ![ssh A-1](https://user-images.githubusercontent.com/25878224/224857215-7f644c6d-2923-4766-83b3-84d2ae0eb606.PNG)
-    
-   
-  ![ssh A-2](https://user-images.githubusercontent.com/25878224/224857234-dab26f6b-123f-4bc6-ac34-2b8ff778b597.PNG)
-    
+  ![6- ssh 1 A](https://user-images.githubusercontent.com/25878224/226161009-90ec48aa-1d7c-44c6-aa90-8ee5a36a28c6.PNG)
+
+  ![7- ssh 2 A](https://user-images.githubusercontent.com/25878224/226161221-0a60a2ac-998d-4a9b-8549-c895702bcfc1.PNG)
 
   ## - Linux B
    
-  ![ssh B-1](https://user-images.githubusercontent.com/25878224/224857266-e814e9a3-9ca5-44d6-85f0-dee666bfd854.PNG)
-    
+  ![6- ssh 1 B](https://user-images.githubusercontent.com/25878224/226161233-5bf69f49-bd49-4610-863f-a949c07cfa81.PNG)
 
-  ![ssh B -2](https://user-images.githubusercontent.com/25878224/224857276-790394fa-589e-42d2-9493-7ead57a71eda.PNG)
-    
-   
-  ![ssh B-3](https://user-images.githubusercontent.com/25878224/224857282-d8beddbe-be07-40cd-bd9e-a1380296e2ae.PNG)
-    
+  ![7- ssh 2 B](https://user-images.githubusercontent.com/25878224/226161241-42f6bb3a-677a-4f91-aa9f-f6c4e6b9b70c.PNG)
 
   ## - Linux C
    
-  ![ssh C -1](https://user-images.githubusercontent.com/25878224/224857314-7ae968c1-8c1e-4dd0-96dc-43081cd56a0d.PNG)
-    
+  ![6- ssh 1 C](https://user-images.githubusercontent.com/25878224/226161259-2ab4ee1d-86df-4b4b-850a-0455d229ebc2.PNG)
 
-  ![ssh C -2](https://user-images.githubusercontent.com/25878224/224857330-541b5867-0833-4ea6-b038-b0a111bd0908.PNG)
-    
+  ![7- ssh 2 C](https://user-images.githubusercontent.com/25878224/226161260-551350a2-5652-47f9-a55e-9368726dcccd.PNG)
+
 
 # 7. Configration neworks and adapters for machines
   ## - Linux A 
   
-  ![netplan config A -1 neww](https://user-images.githubusercontent.com/25878224/225191507-33569119-f1da-4bad-80c4-066baa2ff652.PNG)
+  ![8- config A](https://user-images.githubusercontent.com/25878224/226161288-3a9d6ae3-d211-4226-80ca-315a5324d77f.PNG)
 
-  ![netplan config A -2](https://user-images.githubusercontent.com/25878224/224859181-5b0f1bf9-9018-44fb-9653-8689ca25447f.PNG)
-  
+  ![8- ip addr new A](https://user-images.githubusercontent.com/25878224/226161307-7634da91-b658-4487-a1bc-a35b458cccb7.PNG)
+
 
   ## - Linux B 
+  ![8- config B](https://user-images.githubusercontent.com/25878224/226161313-a7c49e49-bbfe-443f-b8dd-806c65235f12.PNG)
   
-  ![netplan config B -1 new](https://user-images.githubusercontent.com/25878224/225191558-c55f9c74-2be3-490d-a7c6-ced8536c198c.PNG)
+  ![8- ip addr new B](https://user-images.githubusercontent.com/25878224/226161322-be520b26-60e5-45a5-a19a-0d495d7761de.PNG)
 
-  ![netplan config B -2](https://user-images.githubusercontent.com/25878224/224858866-7cfcd918-0825-4d2e-b2ee-87e3fdab23ee.PNG)
-  
+ 
   ## - Linux C 
   
-  ![netplan config C -1 newww](https://user-images.githubusercontent.com/25878224/225191601-19859f4f-da9c-409d-b64d-1739a7176f2d.PNG)
-
-
-   ![ip addr C Neww](https://user-images.githubusercontent.com/25878224/224864978-e00fbd20-658b-4608-a82b-709223d7a0ea.PNG)
-
-    
+  ![8- config C](https://user-images.githubusercontent.com/25878224/226161337-c6ab6612-0f45-4e40-953b-1971991187ca.PNG)
+  
+  ![8- ip addr new C ](https://user-images.githubusercontent.com/25878224/226161377-67ee08f4-1df2-4934-9dc2-4e8ab1600539.PNG)
+   
 # 8. Route configuration 
   ## 1. check the connection between server and gateway using tcp over enp0s8
     
-  ![tcp B - A](https://user-images.githubusercontent.com/25878224/224865139-45c038ba-2197-48f5-a844-9645f62cae7e.PNG)
-
+  ![tcp A to B](https://user-images.githubusercontent.com/25878224/226161389-0d02c3fb-1718-4d2d-b2bc-6835b16dcaee.PNG)  
     
   ## 2. check the connection between client and gateway using tcp over enp0s9
 
-  ![tcp B -C](https://user-images.githubusercontent.com/25878224/224865158-3425933c-7137-4edb-b0dd-a3539520c99e.PNG)
+  ![tcp Cto B](https://user-images.githubusercontent.com/25878224/226161414-13ed7a53-02d2-43f1-9083-21312473c52e.PNG)
 
   ## 3. connection between sever and client over gateway 
    ### The easiest way with the current configuration is to allow ip packet forwarding in our gateway
-        
-  ![ip_forward_1 B](https://user-images.githubusercontent.com/25878224/224865655-c36a6ae9-9873-4af6-b3b7-da57ef60c35a.PNG)
    
-  ![ip_forward_1 B-2](https://user-images.githubusercontent.com/25878224/224865677-0995dc83-9e6d-483f-8851-c47873cd70b9.PNG)
+   ![10- ip forward_1 -1 B](https://user-images.githubusercontent.com/25878224/226161470-4e8afa29-c675-41ce-8773-efe240e60747.PNG)
+
+  ![11- ip forward_1 -2 B](https://user-images.githubusercontent.com/25878224/226161472-662aa3c6-bea6-4cbb-beec-3343e2db1502.PNG)
+
   
    ### Use the tcpdump command to look at how packets are forwarded on the interfaces enp0s8 (with server) and enp0s9 (with client)
         
-  ![tcpdump A-B](https://user-images.githubusercontent.com/25878224/225190473-37f829cb-76de-4ea2-a4ec-025e61e135c2.PNG)
-   
-   
-  ![tcpdump B-C](https://user-images.githubusercontent.com/25878224/225190503-5b05053f-a350-4b3e-b3b8-b69c8aa4bb59.PNG)
-      
+  ![tcp 8 A to C](https://user-images.githubusercontent.com/25878224/226161725-918f6620-9cf7-4673-a81b-6ac17cec9290.PNG)
+
+  ![tcp9 C to A](https://user-images.githubusercontent.com/25878224/226161728-fde66fe7-94f2-4746-bf09-2b3993debdec.PNG)
+
   ## 4. To allow only specific packets to be forwarded on a specific port, we configured the route:
    
-  ![iptables neww B](https://user-images.githubusercontent.com/25878224/225192753-8c85a677-c53a-4b4d-abb9-58ba8ec2060b.PNG)
+  ![iptables](https://user-images.githubusercontent.com/25878224/226161741-7ec045d6-3ef1-42d8-9ab7-4de01d6ba9c2.PNG)
 
   ## 5. save the iptables rules
        
-  ![iptables rules newww](https://user-images.githubusercontent.com/25878224/225192849-e14a6cf7-69b2-4358-a6a2-25210217ad41.PNG)
+  ![iptables save rules 0](https://user-images.githubusercontent.com/25878224/226161753-418e00f8-1264-445c-a84b-1474fb45d759.PNG)
+  
+  ![iptables save rules 1](https://user-images.githubusercontent.com/25878224/226161763-e11204a4-27c4-4b3e-a9b7-870d538ebf99.PNG)
+  
+  ![iptables save rules 2](https://user-images.githubusercontent.com/25878224/226161765-6c929389-35f3-47a4-9ac2-f342e7360784.PNG)
+  
+  ![iptables save rules 3](https://user-images.githubusercontent.com/25878224/226161767-2c886a15-f1d6-4c86-8a2f-7780ac98dac6.PNG)
+  
+  ![iptables save rules 4](https://user-images.githubusercontent.com/25878224/226161768-05bb7a03-9861-4660-8020-ad04c3289011.PNG)
+
 
 # 9. Web Server (Machine A) and the requests from client (Machine C) using curl 
   ## - on the server we create app.py file in new directory called server, then we will raise the server using Flask framework 
   
-  ![app file neww](https://user-images.githubusercontent.com/25878224/225193771-878a3aed-46c5-4e0f-86d4-ae6c4e51728f.PNG)
+ ![9- app file](https://user-images.githubusercontent.com/25878224/226161789-e800108c-b581-4920-b790-25783b3fd6aa.PNG)
+
 
   ## - Let's try to send a request from the client to the server and see what is displayed in tcpdump
  
-  ![web-server1](https://user-images.githubusercontent.com/25878224/225199623-bba890ea-469c-4a30-9b2d-150a71992d2b.PNG)
-   
-  ![web-server-2](https://user-images.githubusercontent.com/25878224/225199643-819bca5b-46f1-4c0c-8d22-1950b853be7d.PNG)
+  ![webserver](https://user-images.githubusercontent.com/25878224/226161799-9a06f24e-8e89-49b1-ae3c-99bc3baba0fd.PNG)
+
   
   ## - check with wrong port
    ### if we change the port in web client request, we obtain (Failed connection)
    
-  ![server port 5001](https://user-images.githubusercontent.com/25878224/225200434-98f0f7e8-598f-44ec-aa45-fc9eb85880aa.PNG)
+  ![port 5001](https://user-images.githubusercontent.com/25878224/226161987-f17c2a2f-9558-4ca8-ab0b-7fc9d273e54d.PNG)
 
-
-  ![server 5001 -2 ](https://user-images.githubusercontent.com/25878224/225200438-cd7f90bf-c19c-48a4-9fdd-9e5809425e6a.PNG)
 
  # 10. Web Services
   ## - Using systemd, you need to create a service that runs the script through autoload
     
-  ![services1](https://user-images.githubusercontent.com/25878224/225201121-c90fe65e-a67b-46b8-92a7-1c656ae92711.PNG)
+  ![service 1](https://user-images.githubusercontent.com/25878224/226161824-73c02858-0ab4-4047-8d18-920d5cf9fb2e.PNG)
+
   
   ## - Restart services and activate autoload
     
-  ![Run service](https://user-images.githubusercontent.com/25878224/225201453-c0dba895-942d-4c70-9132-bd074749267a.PNG)
+  ![service 2](https://user-images.githubusercontent.com/25878224/226161831-a7b3873e-e2ca-44b7-94e5-d3c0f0fc1b5c.PNG)
 
 
