@@ -100,8 +100,11 @@
 
 6. send requests to the web-server on port 5000 uing Curl
 
-![C curl](https://user-images.githubusercontent.com/25878224/224453457-d76433e0-c02e-4d43-813d-b2827cff3104.PNG)
+![1](https://user-images.githubusercontent.com/25878224/226214273-4f562afd-f3ee-43d9-a130-5215b0d04083.PNG)
 
+![2](https://user-images.githubusercontent.com/25878224/226214279-d756ad53-8628-45cc-bc00-0342f51357d2.PNG)
+
+![3](https://user-images.githubusercontent.com/25878224/226214281-638dd9a7-0927-4528-8b58-890c061890d2.PNG)
 
 
 
